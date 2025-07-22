@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سلة التسوق - متجر الورود والهدايا</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>🌹 متجر الورود والهدايا</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                    <li><a href="products.html" class="nav-link">المنتجات</a></li>
+                    <li><a href="cart.html" class="nav-link active">السلة <span id="cart-count">(0)</span></a></li>
+                    <li><a href="about.html" class="nav-link">من نحن</a></li>
+                    <li><a href="contact.html" class="nav-link">اتصل بنا</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>سلة التسوق</h1>
+            </div>
+        </section>
+
+        <section class="cart">
+            <div class="container">
+                <div id="cart-content">
+                    <div id="empty-cart" class="empty-cart">
+                        <h2>سلة التسوق فارغة</h2>
+                        <p>لم تقم بإضافة أي منتجات إلى سلة التسوق بعد</p>
+                        <a href="products.html" class="btn btn-primary">تسوق الآن</a>
+                    </div>
+
+                    <div id="cart-items" class="cart-items" style="display: none;">
+                        <h2>منتجات سلة التسوق</h2>
+                        <div id="cart-list"></div>
+                        
+                        <div class="cart-summary">
+                            <div class="summary-row">
+                                <span>المجموع الفرعي:</span>
+                                <span id="subtotal">0 ريال</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>الشحن:</span>
+                                <span id="shipping">مجاني</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>المجموع الكلي:</span>
+                                <span id="total">0 ريال</span>
+                            </div>
+                        </div>
+
+                        <div class="cart-actions">
+                            <button class="btn btn-outline" onclick="clearCart()">إفراغ السلة</button>
+                            <button class="btn btn-primary" onclick="checkout()">إتمام الطلب</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Checkout Form -->
+                <div id="checkout-form" class="checkout-form" style="display: none;">
+                    <h2>معلومات الطلب</h2>
+                    <form id="order-form">
+                        <div class="form-group">
+                            <label for="customer-name">الاسم الكامل *</label>
+                            <input type="text" id="customer-name" name="customer-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-phone">رقم الهاتف *</label>
+                            <input type="tel" id="customer-phone" name="customer-phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-email">البريد الإلكتروني</label>
+                            <input type="email" id="customer-email" name="customer-email">
+                        </div>
+                        <div class="form-group">
+                            <label for="delivery-address">عنوان التوصيل *</label>
+                            <textarea id="delivery-address" name="delivery-address" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="delivery-notes">ملاحظات إضافية</label>
+                            <textarea id="delivery-notes" name="delivery-notes" rows="3"></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline" onclick="goBackToCart()">العودة للسلة</button>
+                            <button type="submit" class="btn btn-primary">تأكيد الطلب</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>متجر الورود والهدايا</h3>
+                    <p>وجهتك المفضلة للورود الطازجة والهدايا المميزة</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="products.html">المنتجات</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تواصل معنا</h4>
+                    <p>📧 info@flowershop.com</p>
+                    <p>📞 +966 12 345 6789</p>
+                    <p>📍 الرياض، المملكة العربية السعودية</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 متجر الورود والهدايا. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

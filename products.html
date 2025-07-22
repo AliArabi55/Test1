@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المنتجات - متجر الورود والهدايا</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>🌹 متجر الورود والهدايا</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                    <li><a href="products.html" class="nav-link active">المنتجات</a></li>
+                    <li><a href="cart.html" class="nav-link">السلة <span id="cart-count">(0)</span></a></li>
+                    <li><a href="about.html" class="nav-link">من نحن</a></li>
+                    <li><a href="contact.html" class="nav-link">اتصل بنا</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>منتجاتنا</h1>
+                <p>اكتشف مجموعتنا الرائعة من الورود والهدايا</p>
+            </div>
+        </section>
+
+        <section class="products">
+            <div class="container">
+                <div class="filters">
+                    <h3>تصفية المنتجات</h3>
+                    <div class="filter-group">
+                        <label>الفئة:</label>
+                        <select id="category-filter">
+                            <option value="all">جميع الفئات</option>
+                            <option value="roses">ورود</option>
+                            <option value="gifts">هدايا</option>
+                            <option value="bouquets">باقات</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>السعر:</label>
+                        <select id="price-filter">
+                            <option value="all">جميع الأسعار</option>
+                            <option value="0-100">أقل من 100 ريال</option>
+                            <option value="100-300">100 - 300 ريال</option>
+                            <option value="300+">أكثر من 300 ريال</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="products-grid" id="all-products">
+                    <!-- Products will be loaded by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>متجر الورود والهدايا</h3>
+                    <p>وجهتك المفضلة للورود الطازجة والهدايا المميزة</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="products.html">المنتجات</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تواصل معنا</h4>
+                    <p>📧 info@flowershop.com</p>
+                    <p>📞 +966 12 345 6789</p>
+                    <p>📍 الرياض، المملكة العربية السعودية</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 متجر الورود والهدايا. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
